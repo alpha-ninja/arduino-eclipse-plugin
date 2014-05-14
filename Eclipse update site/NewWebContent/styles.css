@@ -1,0 +1,588 @@
+body {
+	background-color: black;
+	margin: 0;
+	padding: 0;
+	color: #FFFFFF;
+	font-family: "Helvetica Neue", sans-serif;
+}
+
+ul {
+	margin: 0;
+	padding: 0 0 0 1.2em;
+}
+
+ul li {
+	padding: 1em 0 0;
+}
+
+ul.downloadList li {
+	padding: 0.2em 0 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0.5rem 0 0;
+}
+
+* + h1, * + h2, * + h3, * + h4, * + h5, * + h6 {
+	margin: 1rem 0 0;
+}
+
+#news h2, #broadcast h2 {
+	margin: 0;
+}
+
+p {
+	margin: 0;
+	padding-top: 1em;
+}
+
+a:visited {
+	color: #A800E5;
+}
+
+/*-------------------HEADER-------------------*/
+header {
+	background-color: #292071;
+	text-align: center;
+}
+
+header ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	font-size: 0;
+}
+
+header ul li {
+	display: inline-block;
+	font-weight: 400;
+	padding: 0 0.5em 0 0.5em;
+	font-size: 1rem;
+	line-height: 3em;
+}
+
+header ul li a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+header ul li a:visited {
+	color: #FFFFFF;
+}
+
+/*-------------------Screenshot view-------------------*/
+
+.screen-r, .screen-l {
+	position: relative;
+	display: flex;
+	flex-flow: row;
+	margin-top: -2px;
+	box-shadow: inset 0 -1px 0 0 black;
+}
+
+.screen-r {
+	flex-flow: row-reverse;
+}
+
+.screen-l img, .screen-r img {
+	width: 50%;
+	flex-shrink: 0;
+	margin: 10% 0;
+	height: 80%;
+}
+
+.screen-l img {
+	margin-left: 1%;
+}
+
+.screen-r img {
+	margin-right: 1%;
+}
+
+.screen-r div, .screen-l div {
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	font-weight: 400;
+	color: white;
+	margin: 1em;
+	flex-basis: 50%;
+	font-size: calc(0.8rem + 1vw);
+	padding: 0 1em 0 0;
+}
+
+.screen-l div {
+	padding: 0 0 0 1em;
+}
+
+
+@media (max-width: 700px) {
+	.screen-r, .screen-l {
+		flex-flow: column-reverse;
+	}
+	.screen-l img, .screen-r img {
+		width: 100%;
+		margin: 0;
+	}
+
+	.screen-l div, .screen-r div {
+		padding: 0;
+	}
+}
+
+.tiledButton {
+	position: relative;
+	margin-top: -2px;
+	text-align: center;
+	font-size: 2rem;
+	transition: all 0.2s ease;
+	background-position: 0 60%;
+}
+
+.tiledButton:hover {
+	transition: all 0.2s ease;
+	background-position: 0 59%;
+}
+
+.tiledButton a {
+	display: inline-block;
+	text-decoration: none;
+	line-height: 7rem;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	transition: all 0.2s ease;
+	top: 0px;
+	color: #FFFFFF;
+	font-weight: 300;
+}
+
+.tiledButton:hover a {
+	transition: all 0.2s ease;
+	top: 2px;
+}
+
+/*-------------------Text View-------------------*/
+
+.main {
+	padding: 1rem;
+	max-width: 768px;
+	margin: 0 auto;
+}
+
+#news {
+	font-weight: 400;
+	padding: 1em;
+	border-image: linear-gradient(to right, black, white, black) 100 30 stretch;
+	//border-top: 2px solid red;
+	max-width: 768px;
+	margin: 0em auto;
+}
+
+.main + * {
+	border-top: 2px solid red;
+}
+
+#broadcast {
+	font-weight: 400;
+	padding: 1em;
+	border-image: linear-gradient(to right, black, white, black) 100 30 stretch;
+	border-top: 2px solid red;
+	max-width: 768px;
+	margin: 0em auto;
+}
+
+/*-------------------Wide Button-------------------*/
+
+.widebutton {
+	display: inline-block;
+	font-weight: 300;
+	margin: 0em auto;
+	text-align: center;
+	background-color: red;
+	flex-grow: 1;
+	flex-basis: 0;
+	min-height: 7em;
+	font-size: 2rem;
+	position: relative;
+	transition: all 0.2s ease;
+	background-position: 0% 70%;
+}
+
+.widebutton:hover {
+	transition: all 0.2s ease;
+	background-position: 0% 67%;
+}
+
+.widebuttonContainer {
+	margin-top: 10px;
+	display: flex;
+	align-items: stretch;
+	flex-flow: row;
+}
+
+.widebutton a {
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	transition: all 0.2s ease;
+	background-position: 50% 50%;
+	top: 0px;
+	color: #FFFFFF;
+	text-decoration: none;
+	align-content: center;
+	justify-content: center;
+	flex-flow: column;
+}
+
+.widebutton .fa {
+	margin-left: 0.3em;
+}
+
+.widebutton:hover a {
+	transition: all 0.2s ease;
+	top: 2px;
+}
+
+.widebutton a .subtitle {
+	display: block;
+	font-size: 0.7em;
+	opacity: 0.8;
+}
+
+.widebutton a .subtitle2 {
+	display: block;
+	font-size: 0.5em;
+	opacity: 0.6;
+	margin-top: 0.2em;
+}
+
+@media (max-width: 700px) {
+	.widebuttonContainer {
+		flex-flow: column;
+	}
+	.widebutton {
+		width: 100%;
+	}
+}
+
+/*-------------------DOWNLOADS-------------------*/
+
+.downloadcontainer {
+	display: flex;
+	flex-flow: row;
+	justify-content: center;
+	margin-top: 1em;
+}
+
+.downloadbutton {
+	display: flex;
+	min-width: 33.333333333333%;
+	background-position: 50% 50%;
+	transition: all 0.2s ease;
+}
+
+.downloadbutton:hover {
+	background-position: 50% 49%;
+	transition: all 0.2s ease;
+}
+
+.downloadbutton .fa:first-child {
+	display: inline-block;
+	font-size: 2.5rem;
+	width: 4rem;
+	line-height: 6rem;
+	text-align: center;
+	border-right: 1px solid rgba(255, 255, 255, 0.5);
+	flex-shrink: 0;
+}
+
+.downloadbutton a {
+	display: inline-block;
+	font-size: 1.5rem;
+	text-decoration: none;
+	color: #FFFFFF;
+	line-height: 1em;
+	text-align: center;
+	flex-grow: 1;
+	position: relative;
+	top: 0;
+	transition: all 0.2s ease;
+	margin: auto;
+}
+
+.downloadbutton a:hover {
+	top: 2px;
+	transition: all 0.2s ease;
+}
+
+.downloadList a {
+	color: #FFFFFF;
+}
+
+.archive {
+	display: flex;
+	flex-flow: row;
+	justify-content: center;
+}
+
+.archive-os {
+	margin-bottom: 0.2em;
+	outline: none;
+	flex-basis: 33.333333333333%;
+	flex-grow: 1;
+}
+
+.archive-os h3 {
+	text-align: center;
+}
+
+@media (max-width: 700px) {
+	.downloadcontainer {
+		flex-flow: column;
+	}
+
+	.archive {
+		flex-flow: column;
+	}
+}
+
+.tiledButton-s {
+	position: relative;
+	margin-top: -2px;
+	text-align: center;
+	font-size: 2rem;
+	transition: all 0.2s ease;
+	background-position: 0 60%;
+}
+
+.tiledButton-s:hover {
+	transition: all 0.2s ease;
+	background-position: 0 59%;
+}
+
+.tiledButton-s a {
+	display: inline-block;
+	text-decoration: none;
+	padding: 1em 0.7em;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	transition: all 0.2s ease;
+	top: 0px;
+	color: #FFFFFF;
+	font-weight: 300;
+	box-sizing: padding-box;
+}
+
+/*-------------------DONATIONS-------------------*/
+
+.donationsContainer-1 {
+	margin-top: 1em;
+}
+
+.donationsContainer-1, .donationsContainer-2, .donationsContainer-3 {
+	display: flex;
+	flex-flow: row;
+	justify-content: center;
+	width: 100%;
+}
+
+.donatebutton {
+	display: flex;
+	background-position: 20% 50%;
+	transition: all 0.2s ease;
+	flex-basis: 10%;
+	flex-grow: 1;
+	flex-shrink: 0;
+	position: relative;
+}
+
+.donatebutton:before {
+	display: inline-block;
+	content: "";
+	width: 4rem;
+	min-height: 4rem;
+	height: 100%;
+	text-align: center;
+	border-right: 1px solid rgba(255, 255, 255, 0.5);
+	flex-shrink: 0;
+}
+
+.donationsContainer-2 .donatebutton {
+	background-position: 80% 50%;
+}
+
+.donationsContainer-3 .donatebutton {
+	background-position: 99% 99%;
+}
+
+.donatebutton:hover {
+	background-position: 20% 49%;
+	transition: all 0.2s ease;
+}
+
+.donationsContainer-2 .donatebutton:hover {
+	background-position: 80% 49%;
+}
+
+.donationsContainer-3 .donatebutton:hover {
+	background-position: 99% 98%;
+}
+
+.donatebutton .fa:not(.fa-beer):first-child {
+	display: inline-block;
+	font-size: 2rem;
+	width: 4rem;
+	line-height: 4rem;
+	text-align: center;
+	flex-shrink: 0;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.donatebutton a {
+	display: inline-block;
+	font-size: 1rem;
+	text-decoration: none;
+	color: #FFFFFF;
+	line-height: 1em;
+	text-align: center;
+	flex-grow: 1;
+	position: relative;
+	top: 0;
+	transition: all 0.2s ease;
+	margin: auto;
+	padding: 0 1em;
+}
+
+.donatebutton a:hover {
+	top: 2px;
+	transition: all 0.2s ease;
+}
+
+.donatebutton > .fa-beer {
+	position: absolute;
+}
+
+.donatebutton:nth-child(1) > .fa-beer:first-child {
+	font-size: 2em;
+	top: 0.7em;
+	left: 0.5em;
+}
+
+.donatebutton:nth-child(2) > .fa-beer:first-child {
+	top: 1.2em;
+	left: 0.35em;
+}
+
+.donatebutton:nth-child(2) > .fa-beer:nth-child(2) {
+	top: 1.2em;
+	left: 1.65em;
+}
+
+.donatebutton:nth-child(3) > .fa-beer:first-child {
+	top: 1.7em;
+	left: 0.35em;
+}
+
+.donatebutton:nth-child(3) > .fa-beer:nth-child(2) {
+	top: 1.7em;
+	left: 1.65em;
+}
+
+.donatebutton:nth-child(3) > .fa-beer:nth-child(3) {
+	top: 0.5em;
+	left: 1em;
+}
+
+@media (max-width: 700px) {
+	.donationsContainer-1, .donationsContainer-2, .donationsContainer-3 {
+		flex-flow: column;
+	}
+}
+
+/*-------------------Collapsibles-------------------*/
+
+div.collapsible h3 {
+	display: inline-block;
+	line-height: 1.5em;
+	margin: 1em 0 0;
+	width: calc(100% - 30px);
+}
+
+div.collapsible h3 + a {
+	float: right;
+	position: absolute;
+	color: #FFFFFF;
+	text-align: center;
+	line-height: 1em;
+	height: 20px;
+	width: 20px;
+	transform: translate(2px, calc(1em + 6px));
+}
+
+div.collapsible h3 + a:not(:target) + a ~ * {
+	display: none;
+}
+
+div.collapsible h3 + a + a {
+	width: 25px;
+	float: right;
+	position: absolute;
+	line-height: 25px;
+	text-decoration: none;
+	transform: translate(0, calc(1em + 3px));
+	z-index: 2;
+}
+
+div.collapsible h3 + a:not(target) + a {
+	display: none;
+}
+
+div.collapsible h3 + a:target + a {
+	display: inline-block;
+}
+
+div.collapsible h3 + a:not(target) span.fa {
+	transform: rotate(90deg);
+	transition: all 0.2s ease;
+}
+
+div.collapsible h3 + a:target span.fa {
+	transform: rotate(0deg);
+	transition: all 0.2s ease;
+}
+
+a[name="-"] {
+	position: fixed;
+	top: 0;
+	visibility: hidden;
+}
+
+div.collapsible img {
+	max-width: 100%;
+}
+
+/*-------------------HEADER-------------------*/
+
+table {
+	width: 100%;
+	margin-top: 1em;
+}
+pre {
+	white-space: pre-wrap;
+}
+
+/*-------------------FOOTER-------------------*/
+
+footer {
+	font-weight: 400;
+	padding: 1em;
+	border-image: linear-gradient(to right, black, white, black) 100 30 stretch;
+	border-top: 2px solid red;
+	max-width: 768px;
+	margin: 0em auto;
+}
